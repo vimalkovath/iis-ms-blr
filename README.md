@@ -8,7 +8,7 @@ Read the following steps and guidelines properly for proper submission of your p
 #### Fork this repository
 
 ### Step 2
-#### Create a New Folder within the forked repository, with the 'folder name' being your 'Team Name'
+#### Create a New Folder within the forked repository, with the 'folder name' being your 'Team Number_Team Name'
 
 ## Contents of the folder
 + The project directory.
