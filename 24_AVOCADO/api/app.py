@@ -8,14 +8,14 @@ def hello_world():
 @app.route('/query-example')
 def query_example():
     location = request.args.get('location')
-    r = requests.get("https://maps.googleapis.com/maps/api/geocode/json?address="+location+",+Bangalore,+CA&key=AIzaSyCyFR5nUdc-N4GV_mvPR4tYYT0_mkml8zs")
+    r = requests.get("https://maps.googleapis.com/maps/api/geocode/json?address="+location+",+Bangalore,+CA&key=key")
     data = r.json()
     d = data["results"][0]["geometry"]["location"]
 
     # print(d["lat"])
     # print(d["lng"])
     print (d)
-    api = "https://maps.googleapis.com/maps/api/place/textsearch/json?query=police station&location="+str(d["lat"])+","+str(d["lng"])+"&radius=1000&key=AIzaSyCyFR5nUdc-N4GV_mvPR4tYYT0_mkml8zs"
+    api = "https://maps.googleapis.com/maps/api/place/textsearch/json?query=police station&location="+str(d["lat"])+","+str(d["lng"])+"&radius=1000&key=key"
     # r = requests.get(api)
     r = requests.get("https://maps.googleapis.com/maps/api/place/textsearch/json?query=police station&location="+str(d['lat'])+","+str(d['lng'])+"&radius=1000&key=AIzaSyCyFR5nUdc-N4GV_mvPR4tYYT0_mkml8zs")
     policeStations = []
